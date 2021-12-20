@@ -30,7 +30,7 @@ int main()
         if (x > arr[i])
             x = arr[i];
     }
-    cout << "Smallest element = " << x;
+    cout << "Smallest number is: " << x;
 
     return 0;
 }
