@@ -1,0 +1,36 @@
+#include <iostream>
+#include <array>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int i;
+    double x = 0, arr[10];
+    cout << "Enter total of numbers: " << endl;
+ 
+    for (i = 0; i < 10; ++i)
+    {
+        cout << "Enter Number " << i + 1 << " : ";
+        cin >> arr[i];
+
+        while (cin.fail())
+        {
+            cout << "Incorrect Input. Enter the number again: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin >> arr[i];
+        }
+    }
+
+    x = arr[0];
+    for (i = 0; i < 10; i++)
+    {
+        if (x > arr[i])
+            x = arr[i];
+    }
+    cout << "Smallest element = " << x;
+
+    return 0;
+}
